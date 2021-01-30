@@ -13,7 +13,6 @@ class App extends React.Component {
       address: ''
     }
 
-    this.mobileNav = React.createRef()
   }
 
   toggleMenu = () => {
@@ -32,7 +31,6 @@ class App extends React.Component {
   render() {
     let { isMenuOpen } = this.state
     let shouldShow = isMenuOpen ? 'mobile-nav-bar-show' : null
-    
 
     return (
       <div className="App">
@@ -48,7 +46,7 @@ class App extends React.Component {
             className="hamburger"
             src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg"
           />
-          <nav ref={this.mobileNav} className={`mobile-nav-bar ${shouldShow}`}>
+          <nav className={`mobile-nav-bar ${shouldShow}`}>
             <p className="mobile-nav-item">Home</p>
             <p className="mobile-nav-item">About</p>
             <p className="mobile-nav-item">Contact</p>
